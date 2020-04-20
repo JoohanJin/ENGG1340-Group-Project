@@ -15,7 +15,7 @@ Battle system:
   When you level up, you can get a new skill.
 A list of features/functions that you plan to implement, vis-a-vis each of the items 1 to 5 listed under coding requirements above.
   Generation of random game sets or events
-    This will be achieved through the selection of the character’s class and the damage taken and given by the       characters
+    This will be achieved through the selection of the character’s class and the damage taken and given by the      characters
   Data structures for storing game status 
     Player_status.txt: stores character’s name, class, current hp, skills
     Enemy_status.txt: stores which enemy is alive.
