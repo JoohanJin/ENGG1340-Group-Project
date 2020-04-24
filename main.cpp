@@ -8,6 +8,7 @@ using namespace std;
 int main() {
     char input;
     string name;
+    int skill_number(2);
     // display the option that user can pick.
     cout << "input N to start a New Game" << endl;
     cout << "Previous savefile (if there is any) will be removed" << endl;
@@ -18,14 +19,15 @@ int main() {
     cin >> input;
 
     // if ( input == 'N'), Make a new character
-    if (input = 'N') {
-        getline(cin, name);
+    if (input == 'N') {
+        cout << "Enter Your Name (your name should be one word): ";
+        cin >> name;
         ofstream character;
-        character.open("Player_status.txt", ios::trunc);
-        character << 
-
+        character.open("Character/Player_status.txt");
+        character << name << endl;
+        character << skill_number << endl;
     }
-
+    
     // if ( input == 'L'), load character file
 
     // if ( input == 'E'), terminate the program
@@ -33,6 +35,10 @@ int main() {
         cout << "BYE BYE" << endl;
         // temporary
         exit(1);
+    }
+
+    else {
+        cout << "invalid input" << endl;
     }
 
 
