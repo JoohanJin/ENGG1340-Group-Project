@@ -1,7 +1,9 @@
 #include <iostream>
 #include <string>
+#include "time.h"
 using namespace std;
-int character_class()
+
+string character_class()
 {
     //variable to generate random number
     int randNum;
