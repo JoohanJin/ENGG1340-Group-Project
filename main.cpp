@@ -10,7 +10,7 @@ int main() {
     string name;
     // display the option that user can pick.
     cout << "input N to start a New Game" << endl;
-    cout << "Previous gamefile (if there is any) will be removed" << endl;
+    cout << "Previous savefile (if there is any) will be removed" << endl;
     cout << "input L to load Game" << endl;
     cout << "input E to exit the Game" << endl;
 
