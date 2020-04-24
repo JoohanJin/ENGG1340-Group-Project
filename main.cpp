@@ -4,12 +4,13 @@ using namespace std;
 
 // main.cpp file for main game playing
 int main(){
-  string input;
+  char input;
   // display the option that user can pick.
-  cout << "New Game" << endl;
-  cout << "Load Game" << endl;
-  cout << "Exit Game" << endl;
+  cout << "input N to start a New Game" << endl;
+  cout << "input L to load Game" << endl;
+  cout << "input E to exit the Game" << endl;
   // get the user input
-  getline(cin, input);
+  cin >> input;
+  // if (n == 'E')....
   return 0;
 }
