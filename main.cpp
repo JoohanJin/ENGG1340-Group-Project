@@ -11,6 +11,13 @@ int main(){
   cout << "input E to exit the Game" << endl;
   // get the user input
   cin >> input;
-  // if (n == 'E')....
+  // if ( n == 'N')
+  
+  // if ( n == 'L')
+  
+  else if (input == 'E'){
+    // temporary
+    exit(1);
+  }
   return 0;
 }
