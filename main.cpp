@@ -7,7 +7,8 @@ using namespace std;
 // main.cpp file for main game playing
 int main() {
     char input;
-    string name;
+    // job = class
+    string name, job;
     int skill_number(2);
     // display the option that user can pick.
     cout << "input N to start a New Game" << endl;
@@ -25,6 +26,7 @@ int main() {
         ofstream character;
         character.open("Character/Player_status.txt");
         character << name << endl;
+        character << job << endl;
         character << skill_number << endl;
     }
     
