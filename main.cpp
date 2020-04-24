@@ -4,11 +4,10 @@
 
 using namespace std;
 
-// main.cpp file for main game playing
 int main() {
     char input;
     // job = class
-    string name, job;
+    string name, job = "Knight";
     int skill_number(2);
     // display the option that user can pick.
     cout << "input N to start a New Game" << endl;
@@ -19,30 +18,35 @@ int main() {
     // get the user input
     cin >> input;
 
-    // if ( input == 'N'), Make a new character
-    if (input == 'N') {
-        cout << "Enter Your Name (your name should be one word): ";
-        cin >> name;
-        ofstream character;
-        character.open("Character/Player_status.txt");
-        character << name << endl;
-        character << job << endl;
-        character << skill_number << endl;
-    }
-    
-    // if ( input == 'L'), load character file
+    while (true) {
+        // if ( input == 'N'), Make a new character
+        if (input == 'N') {
+            cout << "Enter Your Name (your name should be one word): ";
+            cin >> name;
+            ofstream character;
+            character.open("Character/Player_status.txt");
+            character << name << endl;
+            character << job << endl;
+            character << skill_number << endl;
+            break;
+        }
 
-    // if ( input == 'E'), terminate the program
-    else if (input == 'E') {
-        cout << "BYE BYE" << endl;
-        // temporary
-        exit(1);
-    }
+        // if ( input == 'L'), load character file
 
-    else {
-        cout << "invalid input" << endl;
-    }
+        // if ( input == 'E'), terminate the program
+        else if (input == 'E') {
+            cout << "BYE BYE" << endl;
+            break;
+            // temporary
+            exit(1);
+        }
 
+        else {
+            cout << "invalid input" << endl;
+            cout << "Input again: ";
+            cin >> input;
+        }
+    }
 
     return 0;
 }
