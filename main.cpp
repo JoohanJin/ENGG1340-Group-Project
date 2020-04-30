@@ -37,13 +37,14 @@ int main() {
         // if ( input == 'L'), load character file
         else if (input == 'L') {
             ifstream character(C_status);
-            // if Player_status.txt exist --> load the text file
+            // if Player_status.txt does not exist --> print error message and get the input one more time
+            
             if (character.fail()) {
                 cout << "No Character Exists" << endl;
                 cin >> input;
             }
 
-            // if Player_status.txt does not exist --> print error message and get the input one more time
+            // if Player_status.txt exist --> load the text file
             else {
 
             }
