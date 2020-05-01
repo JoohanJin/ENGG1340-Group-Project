@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+// import randomized character selection function into main function
 #include "random.h"
 
 using namespace std;
