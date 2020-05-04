@@ -1,5 +1,5 @@
 # ENGG1340-Group-Project
-Team member
+Team member:
   Joohan Jin - UID: 3035661360
   Chun Kyu Bahk - UID: 3035660445
 Basic game rules - Simple Battle Game
