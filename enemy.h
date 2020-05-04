@@ -8,11 +8,11 @@ int main() {
 		int hp;
 		string moveA;
 		string moveB;
+		string moveC;
 	};
 
-	Enemy enemy_info(string name) {
+	Enemy enemy_information(string name) {
 		Enemy enemy;
-
 		if (name == Sulyvahn) {
 			enemy.hp = 20000;
 			enemy.moveA = "Fireball";
