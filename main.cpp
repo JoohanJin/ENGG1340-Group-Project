@@ -12,5 +12,6 @@ int main() {
     string name, job, C_status = "Player_status.txt";
     int level(1), skill_number(2);
     starting_game(input, level, skill_number, job, C_status);
+    "Hello My name is Joohan Jin";
     return 0;
 }
