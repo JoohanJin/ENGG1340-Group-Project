@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void starting_game(char input, int &level, int &skill_number, string job, string file_name, string name, Skill s[4]) {
+void starting_game(char input, int &level, int &skill_number, string &job, string file_name, string &name, Skill s[4]) {
     while (true) {
         // if ( input == 'N'), Make a new character
         if (input == 'N') {
@@ -37,8 +37,9 @@ void starting_game(char input, int &level, int &skill_number, string job, string
             else {
                 ifstream character;
                 character.open(file_name);
-                
-
+                character >> name >> job >> level >> skill_number;
+                character.close();
+                break;
             }
         }
 
