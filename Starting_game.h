@@ -26,7 +26,7 @@ void starting_game(char input, int &level, int &skill_number, string &job, strin
 
         // if ( input == 'L'), load character file
         else if (input == 'L') {
-            ifstream character(file_name);
+            ifstream character;
             // if Player_status.txt does not exist --> print error message and get the input one more time
             if (character.fail()) {
                 cout << "No Character Exists" << endl;
@@ -35,10 +35,10 @@ void starting_game(char input, int &level, int &skill_number, string &job, strin
 
             // if Player_status.txt exist --> load the text file
             else {
-                ifstream character;
                 character.open(file_name);
                 character >> name >> job >> level >> skill_number;
                 character.close();
+                character_storing(job, skill_number, s);
                 break;
             }
         }
