@@ -10,7 +10,7 @@ struct Skill {
 	string explanation;
 };
 
-void character_storing(string job, int skill_number) {
+void character_storing(string job, int skill_number, Skill S[4]) {
 	Skill s[4];
 	if (job == "Knight") {
 		s[0].name = "Punch"; s[0].damage = 4000; s[0].healing = 0;
