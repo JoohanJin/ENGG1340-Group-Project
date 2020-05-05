@@ -8,20 +8,22 @@ using namespace std;
 
 void starting_game(char input, int level, int skill_number, string job, string file_name) {
     string name;
-
+    Skill s[4];
     while (true) {
         // if ( input == 'N'), Make a new character
         if (input == 'N') {
             cout << "Enter Your Name (your name should be one word): ";
             cin >> name;
             job = character_class();
+            character_storing(job, skill_number, s);
+            for (int i = 0; i < skill_number; i++)
+                cout << s[i].name << " " << s[i].damage << " " << s[i].explanation << endl;
             ofstream character;
             character.open(file_name);
             character << name << endl;
             character << job << endl;
             character << level << endl;
             character << skill_number << endl;
-            character_storing(job, skill_number);
             character.close();
             break;
         }
