@@ -6,44 +6,48 @@ int main() {
 	struct Enemy {
 		string name;
 		int hp;
-		string moveA;
-		string moveB;
-		string moveC;
+		string move;
+		int damage;
 		int level;
+		int healing;
 	};
 
 	Enemy enemy_information(string name) {
-		Enemy enemy;
+		Enemy enemy[5];
 		if (name == Sulyvahn) {
-			enemy.hp = 20000;
-			enemy.moveA = "Fireball";
-			enemy.moveB = "Eclipse";
-			enemy.level = 1;
+			enemy[0].hp = 20000;
+			enemy[1].level = 1;
+			enemy[2].move = "Fireball"; enemy[1].damage = 500; ;
+			enemy[3].move = "Eclipse";  enemy[2].damage = 2000;
+			
 		}
 		else if (name == Lorian) {
-			enemy.hp = 30000;
-			enemy.moveA = "Stab";
-			enemy.moveB = "Slash";
-			enemy.level = 2;
+			enemy[0].hp = 30000;
+			enemy[1].level = 2;
+			enemy[2].move = "Stab"; enemy[1].dmg = 1000;
+			enemy[3].move = "Slash"; enemy[2].dmg = 2000;
+			
 		}
 		else if (name == Lothric) {
-			enemy.hp = 25000;
-			enemy.moveA = "Curse";
-			enemy.moveB = "Shadow";
+			enemy[0].hp = 25000;
+			enemy[1].move = "Curse";
+			enemy[2].move = "Shadow";
 		
 		}
 		else if (name == Artorias) {
-			enemy.hp = 40000;
-			enemy.moveA = "Dance";
-			enemy.moveB = "Whisper";
-			enemy.level = 3;
+			enemy[0].hp = 40000;
+			enemy[1].level = 3;
+			enemy[2].move = "Dance"; enemy[1].damage = 1000;
+			enemy[3].move = "Whisper"; enemy[2].damage = 2000; enemy[2].healing = 1000;
+			
 		}
 		else if (name == Manus) {
-			enemy.hp = 50000;
-			enemy.moveA = "Clutches";
-			enemy.moveB = "Downward";
-			enemy.moveC = "Last";
-			enemy.level = 4;
+			enemy[0].hp = 50000;
+			enemy[1].level = 4;
+			enemy[2].move = "Clutches"; enemy[2].damage = 1000;
+			enemy[3].move = "Downward"; enemy[3].damage = 2000;
+			enemy[4].move = "Last"; enemy[4].damage = 30000;
+			
 		}
 	}
 	
