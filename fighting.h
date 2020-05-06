@@ -121,6 +121,6 @@ void fighting(int& level, int& skill_number, string character_name, string job, 
 	// save the name class level and skill_number
 	ofstream character;
 	character.open("Player_status.txt");
-	character >> character_name >> " " >> job >> " " >> level >> " " >> skill_number;
+	character << character_name << " " << job << " " << level << " " << skill_number;
 	character.close();
 }
