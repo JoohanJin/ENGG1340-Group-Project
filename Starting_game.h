@@ -6,9 +6,7 @@
 
 using namespace std;
 
-void starting_game(char input, int level, int skill_number, string job, string file_name) {
-    string name;
-    Skill s[4];
+void starting_game(char input, int &level, int &skill_number, string &job, string file_name, string &name, Skill s[4]) {
     while (true) {
         // if ( input == 'N'), Make a new character
         if (input == 'N') {
@@ -16,8 +14,6 @@ void starting_game(char input, int level, int skill_number, string job, string f
             cin >> name;
             job = character_class();
             character_storing(job, skill_number, s);
-            for (int i = 0; i < skill_number; i++)
-                cout << s[i].name << " " << s[i].damage << " " << s[i].explanation << endl;
             ofstream character;
             character.open(file_name);
             character << name << endl;
@@ -30,7 +26,7 @@ void starting_game(char input, int level, int skill_number, string job, string f
 
         // if ( input == 'L'), load character file
         else if (input == 'L') {
-            ifstream character(file_name);
+            ifstream character;
             // if Player_status.txt does not exist --> print error message and get the input one more time
             if (character.fail()) {
                 cout << "No Character Exists" << endl;
@@ -39,7 +35,11 @@ void starting_game(char input, int level, int skill_number, string job, string f
 
             // if Player_status.txt exist --> load the text file
             else {
-
+                character.open(file_name);
+                character >> name >> job >> level >> skill_number;
+                character.close();
+                character_storing(job, skill_number, s);
+                break;
             }
         }
 
