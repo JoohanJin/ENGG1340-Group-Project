@@ -2,6 +2,7 @@
 #include <string>
 #include <fstream>
 using namespace std;
+//enemy struct
 int main() {
 	struct Enemy {
 		string name;
@@ -10,8 +11,8 @@ int main() {
 		int damage;
 		int healing;
 	};
-
 	Enemy enemy_information(string name) {
+		//specification of enemy depending on name
 		Enemy enemy[5];
 		if (name == "Sulyvahn") {
 			enemy[0].enemy_hp = 20000;

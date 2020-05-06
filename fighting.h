@@ -10,10 +10,11 @@ using namespace std;
 
 
 void fighting(int &level) {
+	Skill s[4];
 	string winner = "None", loser = "None";
 	string name = "";
 	bool playing = true;
-	// getting the information of enemy from the enemy.txt about skills
+	// getting the information of enemy from the enemy.h about skills
 	// if the level is 1, get the information about pontiff Sulyvahn
 	if (level == 1) {
 		name = "Sulyvahn";
@@ -82,6 +83,8 @@ void fighting(int &level) {
 		int random_number;
 		srand((int)time(0));
 		random_number = rand() % 100;
+		//case of if enemy is Manus who has an extra skill
+		//modification of percentage
 		if (level == 5) {
 			if (random_number > 80) {
 
@@ -92,6 +95,7 @@ void fighting(int &level) {
 			else if(random_number =< 5)
 
 		}
+		//percentage for the 4 mini bosses
 		else if (level != 5) {
 			if (random_number > 80) {
 
@@ -103,10 +107,13 @@ void fighting(int &level) {
 		
 
 	}
-
+	//if player wins the round
+	//increment level
 	if (winner == "Player") {
 		level++;
 	}
+	//if player loses the round
+	//game ends with a "you lose" message
 	else if (loser == "Player") {
 		cout << "You lose";
 	}

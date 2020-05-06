@@ -19,7 +19,7 @@ void character_storing(string job, int skill_number, Skill s[4]) {
 		s[1].explanation = "Block the attack with Titan Shield. 50% of damage reduction";
 		s[2].name = "Stab"; s[2].damage = 8000; s[2].healing = 0;
 		s[2].explanation = "Knight's special attack, stab the enemy with Titan Sword, 8000 damage";
-		// ultiate cannot used in two consecutive rounds. (cool-time of one round needed)
+		// ultimate cannot used in two consecutive rounds. (cool-time of one round needed)
 		s[3].name = "Excalibur"; s[3].damage = 15000; s[3].healing = 0;
 		s[3].explanation = "Knight's ultimate ability, summon Excalibur, the legendary weapon, to attack the enemy. 15000 damage";
 	}
