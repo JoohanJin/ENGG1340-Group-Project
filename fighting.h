@@ -14,7 +14,7 @@ enemy enemy_information(int level) {
 	// getting the information of enemy from the enemy.txt about skills
 	// if the level is 1, get the information about pontiff Sulyvahn
 	if (level == 1) {
-		enemy = 
+
 
 	}
 

@@ -17,7 +17,7 @@ int main() {
 		if (name == Sulyvahn) {
 			enemy[0].hp = 20000;
 			enemy[1].level = 1;
-			enemy[2].move = "Fireball"; enemy[1].damage = 500; ;
+			enemy[2].move = "Fireball"; enemy[1].damage = 500;
 			enemy[3].move = "Eclipse";  enemy[2].damage = 2000;
 			
 		}
