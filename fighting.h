@@ -29,13 +29,23 @@ void fighting(int &level) {
 		}
 		else if (enemy_hp <= 0{
 			winner = "Player";
-		})
+		}
 	}
 
 	// if the level is 2, get the information about Lorian
 	else if (level == 2) {
 		name = "Lorian";
 		enemy_information(name);
+		while (player_hp != 0 && enemy_hp != 0) {
+			//the fighting process takes place
+
+		}
+		if (player_hp <= 0) {
+			loser = "Player";
+		}
+		else if (enemy_hp <= 0{
+			winner = "Player";
+		}
 
 	}
 
@@ -43,6 +53,16 @@ void fighting(int &level) {
 	else if (level == 3) {
 		name = "Lothric";
 		enemy_information(name);
+		while (player_hp != 0 && enemy_hp != 0) {
+			//the fighting process takes place
+
+			}
+		if (player_hp <= 0) {
+			loser = "Player";
+		}
+		else if (enemy_hp <= 0{
+			winner = "Player";
+		}
 
 	}
 
@@ -50,12 +70,32 @@ void fighting(int &level) {
 	else if (level == 4) {
 		name = "Artorias";
 		enemy_information(name);
+		while (player_hp != 0 && enemy_hp != 0) {
+			//the fighting process takes place
+
+			}
+		if (player_hp <= 0) {
+			loser = "Player";
+		}
+		else if (enemy_hp <= 0{
+			winner = "Player";
+		}
 
 	}
-	// if the level is 3, get the information about Manus
+	// if the level is 5, get the information about Manus
 	else if (level == 5) {
 		name = "Manus";
 		enemy_information(name);
+		while (player_hp != 0 && enemy_hp != 0) {
+				//the fighting process takes place
+
+			}
+		if (player_hp <= 0) {
+			loser = "Player";
+		}
+		else if (enemy_hp <= 0{
+			winner = "Player";
+		}
 
 	}
 	// Basic Fighting system
