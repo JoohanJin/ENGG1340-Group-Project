@@ -4,6 +4,7 @@
 #include "Character.h"
 #include "random.h"
 
+
 using namespace std;
 
 void starting_game(char input, int &level, int &skill_number, string &job, string file_name, string &name, Skill s[4]) {
@@ -16,10 +17,7 @@ void starting_game(char input, int &level, int &skill_number, string &job, strin
             character_storing(job, skill_number, s);
             ofstream character;
             character.open(file_name);
-            character << name << endl;
-            character << job << endl;
-            character << level << endl;
-            character << skill_number << endl;
+            character << name << " " << job << " " << level << " " << skill_number;
             character.close();
             break;
         }
@@ -36,8 +34,10 @@ void starting_game(char input, int &level, int &skill_number, string &job, strin
             // if Player_status.txt exist --> load the text file
             else {
                 character.open(file_name);
+                // load the game
                 character >> name >> job >> level >> skill_number;
                 character.close();
+                // get the job and skills
                 character_storing(job, skill_number, s);
                 break;
             }
