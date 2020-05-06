@@ -3,6 +3,8 @@
 #include <string>
 #include "fighting.h"
 #include "enemy.h"
+#include "character.h"
+
 
 using namespace std;
 
@@ -18,7 +20,16 @@ void fighting(int &level) {
 	if (level == 1) {
 		name = "Sulyvahn";
 		enemy_information(name);
+		while (player_hp != 0 && enemy_hp != 0) {
+			//the fighting process takes place
 
+		}
+		if (player_hp <= 0) {
+			loser = "Player";
+		}
+		else if (enemy_hp <= 0{
+			winner = "Player";
+		})
 	}
 
 	// if the level is 2, get the information about Lorian
@@ -55,5 +66,7 @@ void fighting(int &level) {
 	if (winner == "Player") {
 		level++;
 	}
-	
+	else if (loser == "Player") {
+		cout << "You lose";
+	}
 }
