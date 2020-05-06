@@ -60,7 +60,7 @@ void character_storing(string job, int skill_number, Skill s[4]) {
 		s[0].name = "Punch"; s[0].damage = 4000; s[0].healing = 0;
 		s[0].explanation = "Just simple attack, 4000 damage";
 		s[1].name = "Dodge"; s[1].damage = 0; s[1].healing = 0;
-		s[1].explanation = "Dodge enemy's attack with quick step. You shell be careful other wise you will get hit. you will either dodge enemy's attack or get hit.";
+		s[1].explanation = "Dodge enemy's attack with quick step. You shell be careful otherwise, you will get hit. you will either dodge enemy's attack or get hit.";
 		s[2].name = "Poison Vile"; s[2].damage = 8000; s[2].healing = 0;
 		s[3].explanation = "Use poison, 8000 damage.";
 		s[3].name = "Clone Attack"; s[3].damage = 15000; s[3].healing = 0;
