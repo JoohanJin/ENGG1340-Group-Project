@@ -9,8 +9,6 @@
 using namespace std;
 
 
-
-
 void fighting(int &level) {
 	string winner = "None", loser = "None";
 	string name = "";
@@ -20,14 +18,10 @@ void fighting(int &level) {
 	if (level == 1) {
 		name = "Sulyvahn";
 		enemy_information(name);
-		while (player_hp != 0 && enemy_hp != 0) {
-			//the fighting process takes place
-
-		}
 		if (player_hp <= 0) {
 			loser = "Player";
 		}
-		else if (enemy_hp <= 0{
+		else if (enemy_hp <= 0){
 			winner = "Player";
 		}
 	}
@@ -36,14 +30,10 @@ void fighting(int &level) {
 	else if (level == 2) {
 		name = "Lorian";
 		enemy_information(name);
-		while (player_hp != 0 && enemy_hp != 0) {
-			//the fighting process takes place
-
-		}
 		if (player_hp <= 0) {
 			loser = "Player";
 		}
-		else if (enemy_hp <= 0{
+		else if (enemy_hp <= 0){
 			winner = "Player";
 		}
 
@@ -53,14 +43,10 @@ void fighting(int &level) {
 	else if (level == 3) {
 		name = "Lothric";
 		enemy_information(name);
-		while (player_hp != 0 && enemy_hp != 0) {
-			//the fighting process takes place
-
-			}
 		if (player_hp <= 0) {
 			loser = "Player";
 		}
-		else if (enemy_hp <= 0{
+		else if (enemy_hp <= 0){
 			winner = "Player";
 		}
 
@@ -70,14 +56,10 @@ void fighting(int &level) {
 	else if (level == 4) {
 		name = "Artorias";
 		enemy_information(name);
-		while (player_hp != 0 && enemy_hp != 0) {
-			//the fighting process takes place
-
-			}
 		if (player_hp <= 0) {
 			loser = "Player";
 		}
-		else if (enemy_hp <= 0{
+		else if (enemy_hp <= 0){
 			winner = "Player";
 		}
 
@@ -86,14 +68,10 @@ void fighting(int &level) {
 	else if (level == 5) {
 		name = "Manus";
 		enemy_information(name);
-		while (player_hp != 0 && enemy_hp != 0) {
-				//the fighting process takes place
-
-			}
 		if (player_hp <= 0) {
 			loser = "Player";
 		}
-		else if (enemy_hp <= 0{
+		else if (enemy_hp <= 0){
 			winner = "Player";
 		}
 
@@ -101,6 +79,29 @@ void fighting(int &level) {
 	// Basic Fighting system
 	while (playing) {
 		// randomize --> skill
+		int random_number;
+		srand((int)time(0));
+		random_number = rand() % 100;
+		if (level == 5) {
+			if (random_number > 80) {
+
+			}
+			else if (random_number > 5 and random_number <=80) {
+
+			}
+			else if(random_number =< 5)
+
+		}
+		else if (level != 5) {
+			if (random_number > 80) {
+
+			}
+			else if (random_number < 20) {
+
+			}
+		}
+		
+
 	}
 
 	if (winner == "Player") {
