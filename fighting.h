@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "fighting.h"
 #include "enemy.h"
 #include "character.h"
 
