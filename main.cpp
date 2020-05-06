@@ -1,8 +1,10 @@
 #include <iostream>
 #include <string>
+#include <ctime>
 // import randomized character selection function into main function.
 #include "Gettinginput.h"
 #include "Starting_game.h"
+
 
 using namespace std;
 
