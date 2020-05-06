@@ -77,45 +77,52 @@ void fighting(int& level, int& skill_number, string character_name, string job, 
 
 	}
 	// Basic Fighting system
-	while (playing) {
-		// randomize --> skill
-		int random_number;
-		srand((int)time(0));
-		random_number = rand() % 100;
-		//case of if enemy is Manus who has an extra skill
-		//modification of percentage
-		if (level == 5) {
-			if (random_number > 80) {
+	String reply = "Yes";
+
+	while (reply == "Yes") {
+		while (playing) {
+			// randomize --> skill
+			int random_number;
+			srand((int)time(0));
+			random_number = rand() % 100;
+			//case of if enemy is Manus who has an extra skill
+			//modification of percentage
+			if (level == 5) {
+				if (random_number > 80) {
+
+				}
+				else if (random_number > 5 and random_number <= 80) {
+
+				}
+				else if (random_number = < 5)
 
 			}
-			else if (random_number > 5 and random_number <= 80) {
+			//percentage for the 4 mini bosses
+			else if (level != 5) {
+				if (random_number > 80) {
 
+				}
+				else if (random_number < 20) {
+
+				}
 			}
-			else if (random_number = < 5)
-
 		}
-		//percentage for the 4 mini bosses
-		else if (level != 5) {
-			if (random_number > 80) {
-
-			}
-			else if (random_number < 20) {
-
-			}
+		//if player wins the round
+		//increment level
+		//loop for current level is done
+		if (winner == "Player") {
+			level++;
+			reply = "No";
 		}
 
-
-	}
-	//if player wins the round
-	//increment level
-	if (winner == "Player") {
-		level++;
-	}
-
-	//if player loses the round
-	//game ends with a "you lose" message
-	else if (loser == "Player") {
-		cout << "You lose";
+		//if player loses the round
+		//game ends with a "you lose" message
+		//if player lose, and want to retry, player can retry
+		else if (loser == "Player") {
+			cout << "You lose" << endl;;
+			cout << "You want to retry? (Yes or No): ";
+			cin >> reply;
+		}
 	}
 
 	// save the name class level and skill_number
