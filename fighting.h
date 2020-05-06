@@ -6,9 +6,7 @@
 
 using namespace std;
 
-struct enemy {
-	int health
-};
+
 
 enemy enemy_information(int level) {
 	// getting the information of enemy from the enemy.txt about skills
