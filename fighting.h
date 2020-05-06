@@ -17,18 +17,21 @@ enemy enemy_information(int level) {
 	}
 
 	// if the level is 2, get the information about Lorian
-	// special for Lothric
 	else if (level == 2) {
 
 	}
 
-	// if the level is 3, get the information about Artorias
+	// if the level is 3, get the information about Lothric
 	else if (level == 3) {
 
 	}
 
-	// if the level is 3, get the information about Manus
+	// if the level is 4, get the information about Artorias
 	else if (level == 4) {
+
+	}
+	// if the level is 3, get the information about Manus
+	else if (level == 5) {
 
 	}
 }

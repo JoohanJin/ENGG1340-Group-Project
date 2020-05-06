@@ -30,20 +30,21 @@ int main() {
 		}
 		else if (name == Lothric) {
 			enemy[0].hp = 25000;
+			enemy[1].level = 3;
 			enemy[1].move = "Curse";
 			enemy[2].move = "Shadow";
 		
 		}
 		else if (name == Artorias) {
 			enemy[0].hp = 40000;
-			enemy[1].level = 3;
+			enemy[1].level = 4;
 			enemy[2].move = "Dance"; enemy[1].damage = 1000;
 			enemy[3].move = "Whisper"; enemy[2].damage = 2000; enemy[2].healing = 1000;
 			
 		}
 		else if (name == Manus) {
 			enemy[0].hp = 50000;
-			enemy[1].level = 4;
+			enemy[1].level = 5;
 			enemy[2].move = "Clutches"; enemy[2].damage = 1000;
 			enemy[3].move = "Downward"; enemy[3].damage = 2000;
 			enemy[4].move = "Last"; enemy[4].damage = 30000;
