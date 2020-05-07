@@ -39,6 +39,7 @@ void starting_game(char input, int &level, int &skill_number, string &job, strin
                 character.close();
                 // get the job and skills
                 character_storing(job, skill_number, s);
+                cout << "You are " << job << endl;;
                 break;
             }
         }
