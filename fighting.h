@@ -20,7 +20,7 @@ void check_game_done(bool& playing, string winner, int& level, int& skill_number
 	//game ends with a "you lose" message
 	//if player lose, and want to retry, player can retry
 	else if (winner == "Enemy") {
-		cout << "You lose" << endl;
+		cout << "YOU DIED" << endl;
 		playing = false;
 	}
 }
@@ -103,12 +103,12 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 		//modification of percentage
 		if (level == 5) {
 			if (random_number > 80) {
-			
+
 			}
 			else if (random_number > 5 and random_number <= 80) {
 
 			}
-				else if (random_number = < 5) {
+			else if (random_number = < 5) {
 
 			}
 		}
