@@ -5,6 +5,7 @@
 // import randomized character selection function into main function.
 #include "Gettinginput.h"
 #include "Starting_game.h"
+#include "enemy.h"
 
 
 using namespace std;
@@ -12,6 +13,7 @@ using namespace std;
 int main() {
     char input = getting_input();
     Skill s[4];
+    Enemy e[5];
     // job = class
     string name, job, C_status = "Player_status.txt", winner;
     int level(1), skill_number(2);
@@ -22,7 +24,7 @@ int main() {
         cout << s[i].name << ": " << s[i].explanation << endl;
     }
 
-    string reply = "Yes";
+    string reply = "No";
     while (level < 6 && reply == "Yes") {
 
         if (winner == "Player") {
