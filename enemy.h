@@ -1,14 +1,15 @@
 #include <iostream>
 #include <string>
-#include <fstream>
+
 using namespace std;
+
 //enemy struct
 struct Enemy {
 	string name;
-	int enemy_hp;
+	double enemy_hp;
 	string move;
-	int damage;
-	int healing;
+	double damage;
+	double healing;
 };
 
 void enemy_information(string name, Enemy enemy[5]) {
