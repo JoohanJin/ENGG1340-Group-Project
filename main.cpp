@@ -24,5 +24,10 @@ int main() {
     while (level < 6) {
 
     }
+    
+    if (level == 6) {
+        cout << "Congratulations! You have completed all to tasks!" << endl;
+    }
+
     return 0;
 }
