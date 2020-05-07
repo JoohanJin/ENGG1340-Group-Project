@@ -1,15 +1,16 @@
 #include <iostream>
 #include <string>
-#include "time.h"
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
 
-string character_class(){
+string character_class() {
     //variable to generate random number
     int randNum;
-    string Job = "";
-    string moves[5];
+    string Job;
+    srand((int)time(NULL));
     //allow variation of number generation
-    srand((int)time(0));
     //generation of random number
     randNum = rand() % 5;
     //switch-case statement to decide class
