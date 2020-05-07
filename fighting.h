@@ -103,12 +103,12 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 		//modification of percentage
 		if (level == 5) {
 			if (random_number > 80) {
+			
+			}
 			else if (random_number > 5 and random_number <= 80) {
 
 			}
-			else if (random_number = < 5) {
-
-			}
+				else if (random_number = < 5) {
 
 			}
 		}
