@@ -5,8 +5,7 @@
 // import randomized character selection function into main function.
 #include "Gettinginput.h"
 #include "Starting_game.h"
-#include "enemy.h"
-
+#include "fighting.h"
 
 using namespace std;
 
@@ -23,14 +22,17 @@ int main() {
     for (int i = 0; i < skill_number; i++) {
         cout << s[i].name << ": " << s[i].explanation << endl;
     }
+    cout << endl;
 
-    string reply = "No";
+    string reply = "Yes";
     while (level < 6 && reply == "Yes") {
+        winner = "None";
+        fighting(level, skill_number, job, s, winner, e);
 
         if (winner == "Player") {
             // save the name class level and skill_number
             ofstream character;
-            character.open("Player_status.txt");
+            character.open(C_status);
             character << name << " " << job << " " << level << " " << skill_number;
             character.close();
         }
@@ -38,6 +40,7 @@ int main() {
         else if (winner == "Enemy") {
             cout << "Do you want to retry? (Yes or No): ";
             cin >> reply;
+            cout << endl;
         }
     }
 
