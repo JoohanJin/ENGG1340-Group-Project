@@ -11,7 +11,7 @@ struct Enemy {
 	int healing;
 };
 
-Enemy enemy_information(string name, Enemy enemy[5]) {
+void enemy_information(string name, Enemy enemy[5]) {
 	//specification of enemy depending on name
 	if (name == "Sulyvahn") {
 		enemy[0].enemy_hp = 20000;
@@ -20,8 +20,8 @@ Enemy enemy_information(string name, Enemy enemy[5]) {
 	}
 	else if (name == "Lorian") {
 		enemy[0].enemy_hp = 30000;
-		enemy[1].move = "Stab"; enemy[1].dmg = 1000;
-		enemy[2].move = "Slash"; enemy[2].dmg = 2000;
+		enemy[1].move = "Stab"; enemy[1].damage = 1000;
+		enemy[2].move = "Slash"; enemy[2].damage = 2000;
 	}
 	else if (name == "Lothric") {
 		enemy[0].enemy_hp = 25000;
