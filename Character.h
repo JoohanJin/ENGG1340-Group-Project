@@ -5,8 +5,8 @@ using namespace std;
 
 struct Skill {
 	string name;
-	int damage;
-	int healing;
+	double damage;
+	double healing;
 	string explanation;
 };
 
@@ -27,7 +27,7 @@ void character_storing(string job, int skill_number, Skill s[4]) {
 	else if (job == "Paladin") {
 		s[0].name = "Punch"; s[0].damage = 4000; s[0].healing = 0;
 		s[0].explanation = "Just simple attack, 4000 damage";
-		s[1].name = "Healing"; s[1].damage = 0; s[1].healing = 0; // heal 30% of current hp
+		s[1].name = "Healing"; s[1].damage = 0; s[1].healing = 0.3; // heal 30% of current hp
 		s[1].explanation = "Heal by 30% of the current hp";
 		s[2].name = "Strike"; s[2].damage = 8000; s[2].healing = 0;
 		s[2].explanation = "Paladin's special attack, heat the enemy with strong Spike, 8000 damage";
@@ -38,7 +38,7 @@ void character_storing(string job, int skill_number, Skill s[4]) {
 	else if (job == "Priest") {
 		s[0].name = "Punch"; s[0].damage = 4000; s[0].healing = 0;
 		s[0].explanation = "Just simple attack, 4000 damage";
-		s[1].name = "Healing"; s[1].damage = 0; s[1].healing = 0; // add 30% of current hp to character's hp
+		s[1].name = "Healing"; s[1].damage = 0; s[1].healing = 0.3; // add 30% of current hp to character's hp
 		s[1].explanation = "Heal by 30% of the current hp";
 		s[2].name = "Holy Light"; s[2].damage = 8000; s[2].healing = 0;
 		s[2].explanation = "Priest's special attack, using holy light to burn the enemy. 8000 damage";
