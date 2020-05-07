@@ -29,6 +29,7 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 	Skill s[4];
 	string name;
 	bool playing = true;
+	int player_hp, enemy_hp;
 	// getting the information of enemy from the enemy.h about skills
 	// if the level is 1, get the information about pontiff Sulyvahn
 	if (level == 1) {
