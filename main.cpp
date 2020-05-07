@@ -20,5 +20,9 @@ int main() {
     for (int i = 0; i < skill_number; i++) {
         cout << s[i].name << ": " << s[i].explanation << endl;
     }
+    // playing game part
+    while (level < 6) {
+
+    }
     return 0;
 }
