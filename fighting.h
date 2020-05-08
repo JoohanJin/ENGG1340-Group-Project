@@ -170,7 +170,7 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 	if (level == 1) {
 		name = "Sulyvahn";
 		enemy_information(name, e);
-		dialogue = "";
+		dialogue = "Sulyvahn: I have descended from the Boreal Valley. \nSulyvahn: Be prepared to meet your demise";
 		cout << dialogue << endl;
 		Max_hp = 5000;
 		player_hp = 5000;
@@ -181,7 +181,7 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 	else if (level == 2) {
 		name = "Lorian";
 		enemy_information(name, e);
-		dialogue = "";
+		dialogue = "Lorian: I've reigned from the top of Lothric Castle. \nLorian: How dare you have the audacity to challenge me!";
 		cout << dialogue << endl;
 		Max_hp = 10000;
 		player_hp = 10000;
@@ -192,7 +192,7 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 	else if (level == 3) {
 		name = "Lothric";
 		enemy_information(name, e);
-		dialogue = "";
+		dialogue = "???: You...\n???: Killed...\n???: My...\nLothric: BROTHER";
 		cout << dialogue << endl;
 		Max_hp = 10000;
 		player_hp = 10000;
@@ -204,7 +204,7 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 	else if (level == 4) {
 		name = "Artorias";
 		enemy_information(name, e);
-		dialogue = "";
+		dialogue = "Artorias: I've come to defeat the darkness\nArtorias: I will fight anything that gets in my way";
 		cout << dialogue << endl;
 		Max_hp = 15000;
 		player_hp = 15000;
@@ -214,7 +214,7 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 	else if (level == 5) {
 		name = "Manus";
 		enemy_information(name, e);
-		dialogue = "";
+		dialogue = "Manus: Interesting...Very interesting...\nManus: A human with the ability to defeat the Abysswalker\nManus: What a shame your journey comes to an end today\nManus: Be prepared to DIE!";
 		cout << dialogue << endl;
 		Max_hp = 20000;
 		player_hp = 20000;
