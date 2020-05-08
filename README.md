@@ -16,18 +16,26 @@ Battle system:
   When you level up, you can get a new skill.
 A list of features/functions that you plan to implement, vis-a-vis each of the items 1 to 5 listed under coding requirements above.
   Generation of random game sets or events
-    This will be achieved through the selection of the character’s class and the damage taken and given by the characters
+    This will be achieved through the selection of the character’s class and the percentage of deciding the enemy’s attack
   Data structures for storing game status 
-    Player_status.txt: stores character’s name, class, current hp, skills
-    Enemy_status.txt: stores which enemy is alive.
-    Enemy1.txt, Enemy2.txt... : to store each enemy’s status such as hp, skills and so on.
+    Player_status.txt: stores character’s name, class, current level, number of skills
+    Character.h: store each class’ information
+    Enemy.h: stores enemy’s information with the structure
   Dynamic memory management
-    The method of obtaining a new skill when levelling up will be achieved through the use of a dynamic array.
+    Usage of vectors to show how many of which skills are used to kill each enemy.
   File input/output (e.g., for loading/saving game status)
-    When you start a new game, make a new *character_name*_status.txt (file out).
-    When you restart a game and want to load the previous character then you can load *character_name*_status.txt file and continue with the character.
-    Load which enemy should character fight against from Enemy_status.txt.
-    Load the enemy’s status from txt files and upload new info if there is any change.
+    Used file I/O to get the player status
+    When loading game status, used ifstream to call the previous data
+    Saved the progress of the game using ofstream when necessary
   Program codes in multiple files
-    Make a source file that stores functions. E.g. void damage_taken_calculator(), a function to calculate the damage taken by character    
-    with randomized method. Store the function in damage_taken.h and use that file in main.cpp file by makefile method (i.e. #include damage_taken.h)
+    Make header files that store functions. E.g. void fighting(), a function used to carry out the fighting process (i.e. #include fighting.h in main.cpp file)
+  Compilation and execution instructions
+    Makefile is not needed. Just use “g++ -pedantic-errors -std=c++11 main.cpp -o main” to compile this project. 
+    All the header files containing required functions are already connected to each file accordingly. 
+    Compiled file, main, is uploaded to our repository.
+  Problem Statement
+  Assumptions:
+    The input for the character’s name should be one word i.e., without white space
+    During the combat, the input for choosing the skill should be within the range given i.e. 1-4
+    The player is expected to type either “N”, “L” or “E” when starting the game.
+    The player is expected to type either “Yes” or “No” when they lose.
