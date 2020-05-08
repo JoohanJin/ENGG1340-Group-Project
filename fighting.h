@@ -263,8 +263,12 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 			}
 			// we only get the integer input
 			cin >> input;
+			
 			while (input < 1 || input-1 >= skill_number) {
+				cin.clear();
+				cin.ignore(10000, '\n');
 				cout << "invalid input! input again: ";
+				
 				cin >> input;
 			}
 			// input is appropriate
