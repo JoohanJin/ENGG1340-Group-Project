@@ -311,6 +311,8 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 			// attack skill
 			else if (s[input].damage != 0) {
 				enemy_hp -= s[input].damage;
+				if (enemy_hp < 0)
+					enemy_hp = 0;
 				printing_status(enemy_hp, player_hp);
 			}
 			current_player = "Enemy";
