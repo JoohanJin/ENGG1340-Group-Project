@@ -155,7 +155,7 @@ void calculating_damage(int random_number, int previous_skill, string job, Enemy
 			damage *= number;
 		}
 	}
-	
+
 }
 
 
@@ -240,7 +240,7 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 				enemy_hp += healing;
 			}
 			if (damage < 0) {
-				enemy_hp -= damage;
+				enemy_hp += damage;
 			}
 			else if (damage >= 0) {
 				player_hp -= damage;
@@ -268,12 +268,12 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 			}
 			// we only get the integer input
 			cin >> input;
-			
-			while (input < 1 || input-1 >= skill_number) {
+
+			while (input < 1 || input - 1 >= skill_number) {
 				cin.clear();
 				cin.ignore(10000, '\n');
 				cout << "invalid input! input again: ";
-				
+
 				cin >> input;
 			}
 			// input is appropriate
@@ -288,18 +288,18 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 
 					cin >> input;
 				}
-				
+
 				input--;
 			}
 			previous_skill = input;
-			
+
 			cout << "You chose " << s[input].name << "!" << endl;
-			
+
 			number_of_skills.push_back(input);
 			// healing skill
 			if (s[input].healing != 0) {
 				player_hp += player_hp * s[input].healing;
-		
+
 				if (player_hp > Max_hp) {
 					player_hp = Max_hp;
 				}
@@ -314,10 +314,10 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 			current_player = "Enemy";
 
 			cout << endl;
-			
+
 		}
 		check_game_done_hp(enemy_hp, player_hp, winner);
-		
+
 		check_game_done(playing, winner, level, skill_number);
 	}
 }
