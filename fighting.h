@@ -63,7 +63,7 @@ double special_skill(int previous_skill, string job) {
 			}
 		}
 
-		else if (job == "Theif") {
+		else if (job == "Thief") {
 			// when dodge was successful
 			if (number == 0) {
 				cout << "You successfully dodge enemy's attack!" << endl;
