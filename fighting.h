@@ -161,7 +161,7 @@ void calculating_damage(int random_number, int previous_skill, string job, Enemy
 
 
 void fighting(int& level, int& skill_number, string job, Skill s[4], string& winner, Enemy e[5]) {
-	string name, current_player("Enemy");
+	string name, current_player("Enemy"), dialogue;
 	int previous_skill = 0, Max_hp;
 	bool playing = true;
 	double player_hp, enemy_hp, damage;
@@ -170,6 +170,8 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 	if (level == 1) {
 		name = "Sulyvahn";
 		enemy_information(name, e);
+		dialogue = "";
+		cout << dialogue << endl;
 		Max_hp = 5000;
 		player_hp = 5000;
 		enemy_hp = e[0].enemy_hp;
@@ -179,6 +181,8 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 	else if (level == 2) {
 		name = "Lorian";
 		enemy_information(name, e);
+		dialogue = "";
+		cout << dialogue << endl;
 		Max_hp = 10000;
 		player_hp = 10000;
 		enemy_hp = e[0].enemy_hp;
@@ -188,6 +192,8 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 	else if (level == 3) {
 		name = "Lothric";
 		enemy_information(name, e);
+		dialogue = "";
+		cout << dialogue << endl;
 		Max_hp = 10000;
 		player_hp = 10000;
 		enemy_hp = e[0].enemy_hp;
@@ -198,6 +204,8 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 	else if (level == 4) {
 		name = "Artorias";
 		enemy_information(name, e);
+		dialogue = "";
+		cout << dialogue << endl;
 		Max_hp = 15000;
 		player_hp = 15000;
 		enemy_hp = e[0].enemy_hp;
@@ -206,6 +214,8 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 	else if (level == 5) {
 		name = "Manus";
 		enemy_information(name, e);
+		dialogue = "";
+		cout << dialogue << endl;
 		Max_hp = 20000;
 		player_hp = 20000;
 		enemy_hp = e[0].enemy_hp;
