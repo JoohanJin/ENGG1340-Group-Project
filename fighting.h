@@ -93,7 +93,7 @@ void calculating_damage(int random_number, int previous_skill, string job, Enemy
 	//modification of percentage
 	if (level == 5) {
 		// Clutches of The Abyss
-		if (random_number < 20) {
+		if (random_number >= 20 && random_number < 95) {
 			cout << "Manus uses Clutches of the Abyss!" << endl;
 			damage = e[1].damage;
 			number = special_skill(previous_skill, job);
@@ -101,7 +101,7 @@ void calculating_damage(int random_number, int previous_skill, string job, Enemy
 		}
 
 		// Downward Blow
-		else if (random_number >= 20 && random_number < 95) {
+		else if (random_number < 20) {
 			cout << "Manus uses Downward Blow" << endl;
 			damage = e[2].damage;
 			number = special_skill(previous_skill, job);
@@ -112,7 +112,7 @@ void calculating_damage(int random_number, int previous_skill, string job, Enemy
 		else if (random_number >= 95) {
 			cout << "Manus uses Last Resort!" << endl;
 			cout << "THIS ATTACK WILL BE THE LAST THING YOU CAN SEE BEFORE YOU DIE!!!!" << endl;
-			damage = 30000;
+			damage = 50000;
 			number = special_skill(previous_skill, job);
 			damage *= number;
 		}
@@ -155,6 +155,7 @@ void calculating_damage(int random_number, int previous_skill, string job, Enemy
 			damage *= number;
 		}
 	}
+	
 }
 
 
@@ -190,7 +191,7 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 		Max_hp = 10000;
 		player_hp = 10000;
 		enemy_hp = e[0].enemy_hp;
-		skill_number++;
+		skill_number = 3;
 	}
 
 	// if the level is 4, get the information about Artorias
@@ -205,10 +206,10 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 	else if (level == 5) {
 		name = "Manus";
 		enemy_information(name, e);
-		Max_hp;
+		Max_hp = 20000;
 		player_hp = 20000;
 		enemy_hp = e[0].enemy_hp;
-		skill_number++;
+		skill_number = 4;
 	}
 
 	// Basic Fighting system
@@ -217,7 +218,6 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 		// handling the turn
 		if (current_player == "Enemy") {
 			// 
-			srand((int)time(0));
 			int random_number = rand() % 100;
 			//case of if enemy is Manus who has an extra skill
 			calculating_damage(random_number, previous_skill, job, e, level, damage, healing, name);
@@ -229,6 +229,9 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 			}
 			else if (damage >= 0) {
 				player_hp -= damage;
+				if (player_hp < 0) {
+					player_hp = 0;
+				}
 			}
 
 			if (enemy_hp > e[0].enemy_hp)
@@ -259,6 +262,7 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 			while (previous_skill == 3 && input == 3) {
 				cout << "You already used your Ultimate! Cool time of one round is needed! Please choose other skill: ";
 				cin >> input;
+				input--;
 			}
 			previous_skill = input;
 			
@@ -267,6 +271,7 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 			// healing skill
 			if (s[input].healing != 0) {
 				player_hp += player_hp * s[input].healing;
+		
 				if (player_hp > Max_hp) {
 					player_hp = Max_hp;
 				}

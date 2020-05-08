@@ -36,8 +36,8 @@ void enemy_information(string name, Enemy enemy[5]) {
 	}
 	else if (name == "Manus") {
 		enemy[0].enemy_hp = 50000;
-		enemy[1].move = "Clutches of the Abyss"; enemy[2].damage = 1000;
-		enemy[2].move = "Downward Blow"; enemy[3].damage = 2000;
-		enemy[3].move = "Last Resort"; enemy[4].damage = 30000;
+		enemy[1].move = "Clutches of the Abyss"; enemy[1].damage = 1000;
+		enemy[2].move = "Downward Blow"; enemy[2].damage = 2000;
+		enemy[3].move = "Last Resort"; enemy[3].damage = 50000;
 	}
 }
