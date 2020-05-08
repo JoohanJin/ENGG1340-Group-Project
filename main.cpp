@@ -31,6 +31,7 @@ int main() {
     while (level < 6 && reply == "Yes") {
         winner = "None";
         vector<int> number_of_skills;
+        int skill_1(0), skill_2(0), skill_3(0), skill_4(0);
         fighting(level, skill_number, job, s, winner, e, number_of_skills);
 
         if (winner == "Player") {
