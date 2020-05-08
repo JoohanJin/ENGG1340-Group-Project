@@ -71,9 +71,10 @@ int main() {
     }
 
     if (level == 6) {
+        cout << endl;
         cout << "Congratulations! You have completed all the tasks!" << endl;
     }
-    
+
     else {
         cout << "BYEBYE" << endl;
         exit(1);
