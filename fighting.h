@@ -276,6 +276,14 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 			while (previous_skill == 3 && input == 3) {
 				cout << "You already used your Ultimate! Cool time of one round is needed! Please choose other skill: ";
 				cin >> input;
+				while (input < 1 || input - 1 >= skill_number) {
+					cin.clear();
+					cin.ignore(10000, '\n');
+					cout << "invalid input! input again: ";
+
+					cin >> input;
+				}
+				
 				input--;
 			}
 			previous_skill = input;
