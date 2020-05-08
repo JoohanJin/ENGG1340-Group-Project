@@ -160,7 +160,7 @@ void calculating_damage(int random_number, int previous_skill, string job, Enemy
 
 
 
-void fighting(int& level, int& skill_number, string job, Skill s[4], string& winner, Enemy e[5]) {
+void fighting(int& level, int& skill_number, string job, Skill s[4], string& winner, Enemy e[5], vector<int>& number_of_skills) {
 	string name, current_player("Enemy"), dialogue;
 	int previous_skill = 0, Max_hp;
 	bool playing = true;
@@ -289,7 +289,8 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 			previous_skill = input;
 			
 			cout << "You chose " << s[input].name << "!" << endl;
-
+			
+			number_of_skills.push_back(input);
 			// healing skill
 			if (s[input].healing != 0) {
 				player_hp += player_hp * s[input].healing;
