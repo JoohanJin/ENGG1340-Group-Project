@@ -241,6 +241,8 @@ void fighting(int& level, int& skill_number, string job, Skill s[4], string& win
 			}
 			if (damage < 0) {
 				enemy_hp += damage;
+				if (enemy_hp < 0)
+					enemy_hp = 0;
 			}
 			else if (damage >= 0) {
 				player_hp -= damage;
