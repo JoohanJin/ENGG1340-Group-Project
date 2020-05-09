@@ -39,3 +39,4 @@ A list of features/functions that you plan to implement, vis-a-vis each of the i
     During the combat, the input for choosing the skill should be within the range given i.e. 1-4
     The player is expected to type either “N”, “L” or “E” when starting the game.
     The player is expected to type either “Yes” or “No” when they lose.
+Sample Input/Ouput is not appropriate becasue everytime the program is running, the expected result is different because of random number generator applied into the game!
